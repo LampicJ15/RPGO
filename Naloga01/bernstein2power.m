@@ -2,7 +2,7 @@ function p = bernstein2power(b)
 % Opis :
 % bernstein2power pretvori polinom , predstavljen s
 % koeficienti v Bernsteinovi bazi , v polinom , predstavljen
-% v Bpotenèni bazi
+% v potenèni bazi
 %
 %
 % Vhodni podatek :
@@ -31,4 +31,6 @@ end
 p = fliplr(sum(p));
 
 end
+
+
 
