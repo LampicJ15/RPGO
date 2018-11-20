@@ -24,7 +24,8 @@ k = length(t);
 b = zeros(k,d);
 
 for i=1:k
-    b(i,:)=decasteljau(B,t(i));
+    D=decasteljau(B,t(i));
+    b(i,:) = D{1,end};
 end
 
 end

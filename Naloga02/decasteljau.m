@@ -23,22 +23,20 @@ function D = decasteljau (b,t)
 [n,d]= size(b);
 
 %de casteljaujeva shema
-DS = cell(n,n);
+D = cell(n,n);
 
 %prvi stolpec v D so zaèetne toèke b
 for i=1:n
-    DS{i,1}=b(i,:);
+    D{i,1}=b(i,:);
 end
 
 for j = 2:n
     for i=1:(n-j+1)
-        DS{i,j} = (1-t)*DS{i,j-1} + t*DS{i+1,j-1};
+        D{i,j} = (1-t)*D{i,j-1} + t*D{i+1,j-1};
     end
     for i=(n-j+2):n
-        DS{i,j}=nan;
+        D{i,j}=nan;
     end
     
 end
-
-D=DS{1,n};
 end
