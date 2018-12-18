@@ -22,26 +22,22 @@ function [ bx , by , bz ] = bezier2 ( Bx , By ,Bz ,u , v )
 n = size(Bx,1)-1;
 m = size(Bx,2)-1;
 
-tocke = zeros(n+1,m+1,3);
-tocke(:,:,1)=Bx;
-tocke(:,:,2)=By;
-tocke(:,:,3)=Bz;
-
-U = length(u);
-V = length(v);
+M = length(u);
+N = length(v);
 
 %za vsak parameter v naredimo nove kontrolne toèke
-bx = zeros(V,U);
-by = zeros(V,U);
-bz = zeros(V,U);
+bx = zeros(N,M);
+by = zeros(N,M);
+bz = zeros(N,M);
 
-for i=1:U
-    for j=1:V
+for j=1:N
+    for i = 1:M
         [x y z]= bezier2aux(Bx,By,Bz,u(i),v(j));
-        bx(j,i) = x;
-        by(j,i) = y;
-        bz(j,i) = z;
+        bx(i,j) = x;
+        by(i,j) = y;
+        bz(i,j) = z;
     end
 end
+
 
 end
