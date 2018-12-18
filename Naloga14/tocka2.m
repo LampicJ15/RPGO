@@ -1,4 +1,4 @@
-%2.tocka 14 naloge
+%2.tocka 14 naloge test
 
 Bx = [0 2 6 8;
       1 3 7 nan;
@@ -14,3 +14,16 @@ Bx = [0 2 6 8;
      4 -2 3 nan;
      0 5 nan nan;
      3 nan nan nan];
+ 
+%Izracun tock na trikotni Bezierjevi ploskvi
+
+%Generiranje trikotne mreze (glej funkcijo trimeshgrid):
+[TRI,U] = trimeshgrid(10);
+
+%Izracun tock na trikotni Bezierjevi krpi:
+
+b = bezier3(Bx,By,Bz,U);
+
+%Izris trikotne Bezierjeve krpe:
+
+trisurf(TRI,b(:,1),b(:,2),b(:,3));

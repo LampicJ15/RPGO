@@ -25,7 +25,7 @@ m = size(U,1);
 b = zeros(m,3);
 
 for i = 1:m
-    b(i,:)= decasteljau3(Bx,By,Bz, U(i));
+    b(i,:)= decasteljau3(Bx,By,Bz, U(i,:));
 end
 
 end

@@ -15,11 +15,13 @@ function plotbezier3(Bx,By,Bz,d)
 
 %sestavimo triangulacijo trikotnika
 [TRI,U] = trimeshgrid(d);
+TRI2 = trimeshgrid((size(Bx,1)-1));
 %tocke
 b = bezier3(Bx,By,Bz,U);
-
 clf;
-trimesh(TRI,b(:,1),b(:,2),b(:,3));
+trisurf(TRI,b(:,1),b(:,2),b(:,3));
 hold on;
-trimesh(TRI,Bx,By,Bz, 'facecolor','none');
+trimesh(TRI2,Bx(:),By(:),Bz(:),'facecolor','none');
+
+
 end

@@ -9,4 +9,10 @@ plotrbezier(B,w,t);
 
 %dvignjemo stopnjo za 1
 [B1,w1] =rbezierelv(B,w);
+
 plotrbezier(B1,w1,t);
+
+%dvignjemo stopnjo za 2
+[B2,w2] =rbezierelv(B1,w1);
+
+plotrbezier(B2,w2,t);

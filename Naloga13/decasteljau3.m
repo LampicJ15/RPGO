@@ -22,10 +22,7 @@ function b = decasteljau3 (Bx,By,Bz,U)
 n = size(Bx,1)-1;
 
 %naredimo seznam baricentricnih koordinat
-bar = zeros(n,3);
-for i= 1:n
-    bar(i,:)=U;
-end
+bar = repmat(U,n,1);
 
 %za vsako koordinato b naredimo blossom3
 bx = blossom3(Bx,bar);
