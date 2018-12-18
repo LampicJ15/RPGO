@@ -1,6 +1,5 @@
-function db = bezierCtrlDer(B,r)
+function db = bezierder(B,r,t)
 % Opis :
-%Bezier Control points of Derivative
 % bezierder vrne tocke na krivulji , ki predstavlja odvod
 % dane Bezierjeve krivulje
 %%Definicija :
@@ -20,5 +19,7 @@ function db = bezierCtrlDer(B,r)
 %stopnja
 n = n-1;
 %dimenzija
-db = factorial(n)/factorial(n-r)*diff(B,r);
+dr = factorial(n)/factorial(n-r)*diff(B,r);
+
+db = bezier(dr,t);
 end
