@@ -1,8 +1,8 @@
 %3.tocka
 
 %koeficienti polinoma dveh spremenljivk
-B = [2 1 -1 0;
-     5 3 -4 nan;
+B = [2 5 -1 0;
+     1 3 -4 nan;
      0 0 nan nan ;
      1 nan nan nan];
  
@@ -29,7 +29,7 @@ B = [2 1 -1 0;
  y = vectorbary([0 1], T); %(-0.166667, -0.250000, 0.416667)
  
  %odvod v smeri x
- n = 4;
+ n = 3;
  Dx1 = factorial(n)/factorial(n-1)*blossom3(B,[x;bar1;bar1]);
  Dx2 = factorial(n)/factorial(n-1)*blossom3(B,[x;bar2;bar2]);
  Dx3 = factorial(n)/factorial(n-1)*blossom3(B,[x;bar3;bar3]);
