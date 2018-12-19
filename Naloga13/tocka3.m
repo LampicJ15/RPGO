@@ -37,3 +37,7 @@ B = [2 5 -1 0;
 %odvod v smeri y
  Dy1 = factorial(n)/factorial(n-1)*blossom3(B,[y;bar1;bar1]);
  Dy2 = factorial(n)/factorial(n-1)*blossom3(B,[y;bar2;bar2]);
+ 
+ 
+%enostavnej izracun
+dbezier3(B,B,B,1,x,0,y,bar2);

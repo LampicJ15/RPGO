@@ -26,9 +26,9 @@ M = length(u);
 N = length(v);
 
 %za vsak parameter v naredimo nove kontrolne toèke
-bx = zeros(N,M);
-by = zeros(N,M);
-bz = zeros(N,M);
+bx = zeros(M,N);
+by = zeros(M,N);
+bz = zeros(M,N);
 
 for j=1:N
     for i = 1:M
