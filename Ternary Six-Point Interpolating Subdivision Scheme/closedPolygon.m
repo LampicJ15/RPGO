@@ -1,4 +1,4 @@
-%Ternary Six-Point interpolating scheme for  closed polygon
+%Ternary Six-Point interpolating scheme for closed polygon
 
 %set axis to select points
 clf;
