@@ -26,6 +26,8 @@ n6 = w;
 %define the number of steps of the subdivision
 steps = 5;
 pause;
+
+
 for i =1:steps
     
     %new polygon
@@ -53,6 +55,7 @@ for i =1:steps
     
     polygon = new_polygon;
     plot([polygon(:,1); polygon(1,1)],[polygon(:,2); polygon(1,2)],'-o');
+    axis([0 10 0 10]);
     hold on;
     pause;
     

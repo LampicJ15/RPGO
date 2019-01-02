@@ -60,6 +60,7 @@ for i =1:steps
     
     polygon = new_polygon;
     plot(polygon(:,1),polygon(:,2),'-o');
+    axis([0 10 0 10]);
     hold on;
     pause;
     
