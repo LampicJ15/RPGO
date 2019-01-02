@@ -9,8 +9,8 @@ axis([0 10 0 10]);
 polygon = [xs,ys];
 
 %plot closed polygon
-axis([0 10 0 10]);
 plot([polygon(:,1); polygon(1,1)],[polygon(:,2); polygon(1,2)], '-o');
+axis([0 10 0 10]);
 hold on;
 
 %define weights
@@ -25,6 +25,7 @@ n6 = w;
 
 %define the number of steps of the subdivision
 steps = 5;
+pause;
 
 for i =1:steps
     
@@ -52,7 +53,8 @@ for i =1:steps
      end
     
     polygon = new_polygon;
-    plot([polygon(:,1); polygon(1,1)],[polygon(:,2); polygon(1,2)]);
+    plot([polygon(:,1); polygon(1,1)],[polygon(:,2); polygon(1,2)],'-o');
+    axis([0 10 0 10]);
     hold on;
     pause;
     
@@ -60,6 +62,7 @@ end
 
 hold off;
 plot([polygon(:,1); polygon(1,1)],[polygon(:,2); polygon(1,2)]);
+axis([0 10 0 10]);
 hold on;
 
 
