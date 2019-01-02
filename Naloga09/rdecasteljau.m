@@ -1,4 +1,4 @@
-function b = rdecasteljau (B ,w , t )
+function [b,BS,W] = rdecasteljau (B ,w , t )
 % Opis :
 % rdecasteljau vrne toèko na racionalni Bezierjevi
 % krivulji , ki je izraèunana z de Casteljaujevim

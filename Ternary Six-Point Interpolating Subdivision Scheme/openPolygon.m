@@ -9,8 +9,8 @@ axis([0 10 0 10]);
 polygon = [xs,ys];
 
 %plot closed polygon
-axis([0 10 0 10]);
 plot(polygon(:,1),polygon(:,2), '-o');
+axis([0 10 0 10]);
 hold on;
 
 %define weights
@@ -59,7 +59,7 @@ for i =1:steps
      end
     
     polygon = new_polygon;
-    plot(polygon(:,1),polygon(:,2));
+    plot(polygon(:,1),polygon(:,2),'-o');
     hold on;
     pause;
     
@@ -67,6 +67,7 @@ end
 
 hold off;
 plot(polygon(:,1),polygon(:,2));
+axis([0 10 0 10]);
 hold on;
 
 
