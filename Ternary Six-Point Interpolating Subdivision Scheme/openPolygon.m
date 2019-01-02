@@ -4,17 +4,19 @@
 clf;
 axis([0 10 0 10]);
 
-%define closed polygon
+%define open polygon
 [xs,ys] = getpts;
 polygon = [xs,ys];
 
-%plot closed polygon
+%plot open polygon
 plot(polygon(:,1),polygon(:,2), '-o');
 axis([0 10 0 10]);
 hold on;
 
 %define weights
-w = 0.0116;
+%w = 0.005;  %C^0 continuity 
+%w = 0.0105; %C^1 continuity 
+%w = 0.0116; %C^2 continuity 
 
 n1 = -11/81 + 13*w;
 n2 = 13/27 -51*w;
@@ -25,7 +27,6 @@ n6 = w;
 
 %define the number of steps of the subdivision
 steps = 5;
-
 pause;
 
 for i =1:steps
@@ -58,7 +59,7 @@ for i =1:steps
         
      end
     
-    polygon = new_polygon;
+    polygon = new_polygon(1:end-2,:);
     plot(polygon(:,1),polygon(:,2),'-o');
     axis([0 10 0 10]);
     hold on;
