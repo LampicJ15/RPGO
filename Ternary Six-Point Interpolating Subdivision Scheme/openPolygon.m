@@ -15,7 +15,7 @@ hold on;
 
 %define weights
 %w = 0.005;  %C^0 continuity 
-%w = 0.0105; %C^1 continuity 
+w = 0.0105; %C^1 continuity 
 %w = 0.0116; %C^2 continuity 
 
 n1 = -11/81 + 13*w;
